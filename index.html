@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="Effective Solutions for Your Business" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Webstudio</title>
 
     <!--Font-->
@@ -33,6 +33,12 @@
           <a class="logo header-logo" href="./index.html"
             >Web<span class="logo-part">Studio</span></a
           >
+          <button type="button">
+            <svg class="mobile-menu-btn" width="24" height="24">
+              <use href="./images/icons.svg#icon-solid-menu"></use>
+            </svg>
+          </button>
+
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link current" href="./index.html">Studio</a>
@@ -64,14 +70,14 @@
     </header>
 
     <main>
-      <section class="section solutions">
+      <section class="section solutions hide">
         <div class="container solution-container">
           <h1 class="solutions-title">Effective Solutions for Your Business</h1>
           <button class="solution-button" type="button">Order Service</button>
         </div>
       </section>
 
-      <section class="section content">
+      <section class="section content hide">
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="content-list">
@@ -381,7 +387,7 @@
         </div>
       </section>
 
-      <section class="section portfolio">
+      <section class="section portfolio hide">
         <div class="container con-portfolio">
           <h2 class="portfolio-title">Our Portfolio</h2>
 
@@ -513,7 +519,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer hide">
       <div class="container footer-container">
         <div class="footer-div">
           <a class="logo footer-logo" href="./index.html"
