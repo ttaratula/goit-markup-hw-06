@@ -283,10 +283,6 @@ button {
   color: #4d5ae5;
 }
 
-.address-mobile-list {
-  padding-bottom: 48px;
-}
-
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -304,9 +300,12 @@ button {
 }
 
 .adress-mobile-item {
-  padding-bottom: 24px;
+  margin-top: 24px;
 }
 
+.address-mobile-list {
+  margin-bottom: 48px;
+}
 .adress-link-mobile {
   font-weight: 500;
   display: block;
@@ -362,9 +361,6 @@ button {
   stroke: #2e2f42;
   transition-property: stroke, fill;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.adress-mobile-list {
 }
 
 .social-media-mobile {
@@ -1109,6 +1105,7 @@ input[type='checkbox']:focus-visible
 
 @media only screen and (min-width: 768px) {
   .footer-container {
+    max-width: 584px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1153,7 +1150,7 @@ input[type='checkbox']:focus-visible
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-
+    max-width: 1158px;
     gap: 0;
   }
   .footer-div {
