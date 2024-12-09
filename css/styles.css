@@ -155,6 +155,7 @@ button {
   .adress-link:hover,
   .header-link.current {
     color: #404bbf;
+    background-color: none;
   }
 
   .header-link.current {
@@ -245,7 +246,7 @@ button {
 .mobile-menu-container {
   position: relative;
   padding-top: 72px;
-  padding-bottom: 72px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -260,7 +261,7 @@ button {
 }
 
 .mobile-nav {
-  margin-bottom: 168px;
+  margin-bottom: auto;
 }
 
 .mobile-list {
@@ -300,9 +301,12 @@ button {
 }
 
 .adress-mobile-item {
-  margin-top: 24px;
+  margin-bottom: 24px;
 }
 
+.adress-mobile-item.email {
+  margin-bottom: 0;
+}
 .address-mobile-list {
   margin-bottom: 48px;
 }
@@ -351,7 +355,8 @@ button {
 
 .mmobile-menu-close:hover,
 .mobile-menu-close:focus,
-.mobile-btn-icon {
+.mobile-btn-icon:hover,
+.mobile-btn-icon:focus {
   stroke: #ffffff;
   fill: #ffffff;
 }
@@ -403,7 +408,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero_mob@1x.jpg), url(../images/hero_mob@2x.jpg);
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -442,15 +447,18 @@ button {
 }
 
 .solution-button:focus,
-.solution-button:hover,
-.adress-link:focus,
-.adress-link:hover {
+.solution-button:hover {
   background-color: #404bbf;
 }
 
 @media screen and (min-width: 768px) {
   .section.solutions {
     padding: 112px 136px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero_tab@1x.jpg), url(../images/hero_tab@2x.jpg);
   }
   .solutions-title {
     font-size: 56px;
@@ -461,14 +469,23 @@ button {
 
 @media screen and (min-width: 1158px) {
   .section.solutions {
+    padding-top: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero_deck@1x.jpg), url(../images/hero_deck@2x.jpg);
   }
   .solutions-title {
-    margin-bottom: 48px;
   }
 }
 
+.solutions-title {
+  margin-bottom: 48px;
+}
+
 .content {
-  padding: 96px 16px;
+  padding: 96px 0 96px;
 }
 
 .content-list {
@@ -500,7 +517,7 @@ button {
   color: #434455;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1157px) {
   .container-team {
     padding: 0 108px;
   }
@@ -518,6 +535,9 @@ button {
 }
 
 @media screen and (min-width: 1158px) {
+  .content {
+    padding: 120px 0;
+  }
   .content-list {
     display: flex;
     gap: 24px;
@@ -526,7 +546,15 @@ button {
   .content-item {
     width: calc((100% - 72px) / 4);
   }
-
+  .content-subtitle {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
   .content-icon {
     display: flex;
     align-items: center;
@@ -568,6 +596,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 72px;
+  align-items: center;
 }
 
 .team-item {
@@ -666,7 +695,7 @@ button {
   background-color: #404bbf;
 }
 
-.portfolio section {
+.section {
   max-width: 100%;
   height: auto;
 }
@@ -677,8 +706,7 @@ button {
 }
 
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 0 96px;
 }
 
 .portfolio-title {
@@ -697,13 +725,9 @@ button {
   flex-wrap: wrap;
 }
 
-.portfolio-item:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transform: translateY(0%);
-}
-
 .portfolio-item {
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -716,6 +740,14 @@ button {
 @media only screen and (min-width: 1158px) {
   .portfolio-item {
     width: calc((100% - 2 * 24px) / 3);
+  }
+  .portfolio {
+    padding: 110px 0 120px;
+  }
+  .portfolio-item:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transform: translateY(0%);
   }
 }
 
